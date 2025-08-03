@@ -1,0 +1,315 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EaZy Gold Buyers - A Trusted Name for Selling Your Gold</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Teko:wght@700&family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+            scroll-behavior: smooth;
+            background-color: #f8fafc; /* Slate 50 */
+        }
+        .hero-bg {
+            background-color: #f1f5f9; /* Slate 100 */
+        }
+        .brand-title {
+            font-family: 'Teko', sans-serif;
+            font-weight: 700;
+            letter-spacing: 1px;
+        }
+        .glow-effect {
+            box-shadow: 0 4px 15px rgba(202, 138, 4, 0.3);
+        }
+        .faq-item .faq-answer {
+            display: none;
+            transition: max-height 0.3s ease-out;
+        }
+        .faq-item.active .faq-answer {
+            display: block;
+        }
+        .faq-item.active .faq-icon {
+            transform: rotate(180deg);
+        }
+        .bottom-bar {
+            background-color: #ffffff;
+            border-top: 1px solid #e2e8f0; /* Slate 200 */
+        }
+        .main-quote {
+            font-family: 'Teko', sans-serif;
+            font-size: 3.5rem;
+            font-weight: 700;
+            color: #44403c; /* Stone 700 */
+            line-height: 1.2;
+        }
+        .card-hover {
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        .card-hover:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 10px 20px -5px rgba(0,0,0,0.1);
+        }
+    </style>
+</head>
+<body class="text-gray-800">
+
+    <!-- Header & Navigation -->
+    <header class="bg-white/90 backdrop-blur-sm shadow-sm sticky top-0 z-50">
+        <nav class="container mx-auto px-6 py-3 flex justify-between items-center">
+            <a href="#" class="text-3xl brand-title text-gray-800 flex items-center">
+                <i class="fas fa-gem mr-2 text-amber-500"></i> EaZy Gold Buyers
+            </a>
+            <div class="hidden md:flex flex-grow justify-center space-x-8 items-center">
+                <a href="#hero" class="text-gray-600 hover:text-amber-600 transition duration-300 font-semibold">Home</a>
+                <a href="#services" class="text-gray-600 hover:text-amber-600 transition duration-300 font-semibold">Services</a>
+                <a href="#why-us" class="text-gray-600 hover:text-amber-600 transition duration-300 font-semibold">Why Us</a>
+                <a href="#faq" class="text-gray-600 hover:text-amber-600 transition duration-300 font-semibold">FAQ's</a>
+                <a href="#contact" class="text-gray-600 hover:text-amber-600 transition duration-300 font-semibold">Contact</a>
+            </div>
+            <a href="tel:9951999877" class="hidden md:flex items-center bg-amber-500 text-white font-bold py-2 px-4 rounded-lg hover:bg-amber-600 transition duration-300 glow-effect">
+                <i class="fas fa-phone-alt mr-2"></i> 8885777894
+            </a>
+            <button id="mobile-menu-button" class="md:hidden text-gray-600 hover:text-amber-600">
+                <i class="fas fa-bars text-2xl"></i>
+            </button>
+        </nav>
+        <!-- Mobile Menu -->
+        <div id="mobile-menu" class="hidden md:hidden bg-white py-2">
+            <a href="#hero" class="block px-6 py-3 text-gray-600 hover:bg-amber-50">Home</a>
+            <a href="#services" class="block px-6 py-3 text-gray-600 hover:bg-amber-50">Services</a>
+            <a href="#why-us" class="block px-6 py-3 text-gray-600 hover:bg-amber-50">Why Us</a>
+            <a href="#faq" class="block px-6 py-3 text-gray-600 hover:bg-amber-50">FAQ's</a>
+            <a href="#contact" class="block px-6 py-3 text-gray-600 hover:bg-amber-50">Contact</a>
+            <div class="px-6 py-3">
+                 <a href="tel:9951999877" class="w-full text-center bg-amber-500 text-white font-bold py-2 px-4 rounded-lg hover:bg-amber-600 transition duration-300">Call Us</a>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <!-- Hero Section -->
+        <section id="hero" class="hero-bg py-16 md:py-24">
+            <div class="container mx-auto px-6">
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
+                    <!-- Left Column: Image -->
+                    <div class="text-center">
+                        <img src="https://placehold.co/600x500/ffffff/ca8a04?text=Trusted+Gold+Buyers" alt="Happy couple selling gold" class="rounded-lg shadow-xl mx-auto border-4 border-white" onerror="this.onerror=null;this.src='https://placehold.co/600x500/e2e8f0/4c1d95?text=Image+Not+Found';">
+                    </div>
+                    <!-- Right Column: Quote and Form -->
+                    <div class="text-center md:text-left">
+                        <h1 class="main-quote">TRUSTED GOLD BUYERS</h1>
+                        <div class="mt-8 bg-white/60 backdrop-blur-sm p-8 rounded-lg shadow-xl">
+                             <p class="text-amber-700 text-center mb-4 font-semibold text-lg">We're experts in buying gold and we're here to help!</p>
+                             <form id="hero-form">
+                                 <div class="space-y-4">
+                                     <input type="text" id="hero-name" placeholder="Name" class="w-full p-3 bg-white text-gray-800 rounded-md border border-gray-300 focus:outline-none focus:ring-2 focus:ring-amber-500" required>
+                                     <input type="tel" id="hero-mobile" placeholder="Mobile Number" class="w-full p-3 bg-white text-gray-800 rounded-md border border-gray-300 focus:outline-none focus:ring-2 focus:ring-amber-500" required>
+                                     <input type="text" id="hero-grams" placeholder="Grams (Optional)" class="w-full p-3 bg-white text-gray-800 rounded-md border border-gray-300 focus:outline-none focus:ring-2 focus:ring-amber-500">
+                                     <button type="submit" class="w-full bg-amber-500 text-white font-bold py-3 px-6 rounded-lg hover:bg-amber-600 transition duration-300 glow-effect text-lg">Submit</button>
+                                 </div>
+                                 <div id="hero-form-message" class="mt-4 text-center font-semibold"></div>
+                             </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Our Services Section -->
+        <section id="services" class="py-20 bg-white">
+            <div class="container mx-auto px-6">
+                <h2 class="text-4xl brand-title text-center mb-12 text-gray-800">Our Financial Services</h2>
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-8 text-center">
+                    <div class="bg-slate-50 p-8 rounded-lg border border-slate-200 card-hover">
+                        <i class="fas fa-hand-holding-usd text-5xl text-amber-500 mb-6"></i>
+                        <h3 class="text-2xl font-bold mb-3 text-gray-800">Sell Gold for Cash</h3>
+                        <p class="text-gray-600">Get instant payment at the best market rates for your gold jewelry, coins, and bars. Our process is quick, transparent, and secure.</p>
+                    </div>
+                    <div class="bg-slate-50 p-8 rounded-lg border border-slate-200 card-hover">
+                        <i class="fas fa-landmark text-5xl text-amber-500 mb-6"></i>
+                        <h3 class="text-2xl font-bold mb-3 text-gray-800">Instant Gold Loan</h3>
+                        <p class="text-gray-600">Need funds urgently? Get a loan against your gold with minimal paperwork, low interest rates, and flexible repayment options.</p>
+                    </div>
+                    <div class="bg-slate-50 p-8 rounded-lg border border-slate-200 card-hover">
+                        <i class="fas fa-unlock-alt text-5xl text-amber-500 mb-6"></i>
+                        <h3 class="text-2xl font-bold mb-3 text-gray-800">Release Pledged Gold</h3>
+                        <p class="text-gray-600">We can help you release your gold pledged with other institutions by settling the outstanding loan and providing a higher loan amount if needed.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Why Choose Us Section -->
+        <section id="why-us" class="py-20 bg-slate-50">
+            <div class="container mx-auto px-6">
+                 <h2 class="text-4xl brand-title text-center mb-12 text-gray-800">Why Choose EaZy Gold Buyers?</h2>
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                    <div class="flex items-start space-x-4"><i class="fas fa-check-circle text-3xl text-green-500 mt-1"></i><div><h3 class="text-xl font-bold text-gray-800">Best Prices Guaranteed</h3><p class="text-gray-600">We constantly monitor market rates to ensure you get the most competitive price for your gold.</p></div></div>
+                    <div class="flex items-start space-x-4"><i class="fas fa-lock text-3xl text-green-500 mt-1"></i><div><h3 class="text-xl font-bold text-gray-800">Secure & Confidential</h3><p class="text-gray-600">Your privacy and security are our top priorities. All transactions are handled with utmost confidentiality.</p></div></div>
+                    <div class="flex items-start space-x-4"><i class="fas fa-user-check text-3xl text-green-500 mt-1"></i><div><h3 class="text-xl font-bold text-gray-800">Certified Experts</h3><p class="text-gray-600">Our team of experienced appraisers use state-of-the-art technology for accurate valuation.</p></div></div>
+                    <div class="flex items-start space-x-4"><i class="fas fa-tachometer-alt text-3xl text-green-500 mt-1"></i><div><h3 class="text-xl font-bold text-gray-800">Fast & Transparent Process</h3><p class="text-gray-600">We evaluate your gold right in front of you. No hidden deductions or lengthy procedures.</p></div></div>
+                    <div class="flex items-start space-x-4"><i class="fas fa-gift text-3xl text-green-500 mt-1"></i><div><h3 class="text-xl font-bold text-gray-800">No Obligation Offers</h3><p class="text-gray-600">Our quotes are completely free. There's no pressure to sell if you're not satisfied with the offer.</p></div></div>
+                    <div class="flex items-start space-x-4"><i class="fas fa-wallet text-3xl text-green-500 mt-1"></i><div><h3 class="text-xl font-bold text-gray-800">Instant Payment</h3><p class="text-gray-600">Once you accept our offer, you walk away with cash in hand. It's quick and hassle-free.</p></div></div>
+                </div>
+            </div>
+        </section>
+
+        <!-- FAQ Section -->
+        <section id="faq" class="py-20 bg-white">
+            <div class="container mx-auto px-6">
+                <h2 class="text-4xl brand-title text-center mb-12 text-gray-800">Frequently Asked Questions</h2>
+                <div class="max-w-3xl mx-auto space-y-4">
+                    <div class="faq-item bg-slate-50 rounded-lg border border-slate-200">
+                        <div class="faq-question flex justify-between items-center p-6 cursor-pointer">
+                            <h3 class="font-semibold text-lg text-gray-800">What documents do I need to sell gold or get a loan?</h3>
+                            <i class="fas fa-chevron-down faq-icon transition-transform text-amber-500"></i>
+                        </div>
+                        <div class="faq-answer px-6 pb-6 text-gray-600">
+                            You will need one valid government-issued photo ID (like an Aadhar Card, Passport, or Driver's License) and one address proof. For loans, a PAN card may also be required.
+                        </div>
+                    </div>
+                    <div class="faq-item bg-slate-50 rounded-lg border border-slate-200">
+                        <div class="faq-question flex justify-between items-center p-6 cursor-pointer">
+                            <h3 class="font-semibold text-lg text-gray-800">How is the purity of my gold determined?</h3>
+                            <i class="fas fa-chevron-down faq-icon transition-transform text-amber-500"></i>
+                        </div>
+                        <div class="faq-answer px-6 pb-6 text-gray-600">
+                            We use non-invasive, high-precision XRF (X-ray fluorescence) spectrometers to accurately determine the purity of your gold without causing any damage to your items.
+                        </div>
+                    </div>
+                    <div class="faq-item bg-slate-50 rounded-lg border border-slate-200">
+                        <div class="faq-question flex justify-between items-center p-6 cursor-pointer">
+                            <h3 class="font-semibold text-lg text-gray-800">What are the interest rates for a gold loan?</h3>
+                            <i class="fas fa-chevron-down faq-icon transition-transform text-amber-500"></i>
+                        </div>
+                        <div class="faq-answer px-6 pb-6 text-gray-600">
+                            Our interest rates are highly competitive and vary based on the loan amount and tenure. Please visit our branch for the latest rates and schemes. We guarantee complete transparency with no hidden charges.
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <!-- Contact & Location Section -->
+        <section id="contact" class="py-20 bg-slate-50">
+            <div class="container mx-auto px-6">
+                 <h2 class="text-4xl brand-title text-center mb-12 text-gray-800">Visit Us or Get in Touch</h2>
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
+                    <div>
+                        <p class="text-gray-600 mb-6 text-lg">Have questions? We're here to help. Visit our store in Vijayawada or send us a message using the form.</p>
+                        <div class="space-y-4">
+                            <p class="flex items-center text-lg"><i class="fas fa-map-marker-alt text-amber-500 w-6 mr-3"></i> Kabela Junction, Vijayawada, AP</p>
+                            <p class="flex items-center text-lg"><i class="fas fa-phone text-amber-500 w-6 mr-3"></i> +91 8885777894</p>
+                            <p class="flex items-center text-lg"><i class="fas fa-envelope text-amber-500 w-6 mr-3"></i> contact@eazygoldbuyers.com</p>
+                            <p class="flex items-center text-lg"><i class="fas fa-clock text-amber-500 w-6 mr-3"></i> Mon - Sat: 10:00 AM - 8:00 PM</p>
+                        </div>
+                    </div>
+                    <div class="bg-white p-8 rounded-lg shadow-xl">
+                         <h3 class="text-2xl font-bold mb-6 text-center text-gray-800">Send us a Message</h3>
+                         <form id="contact-form">
+                             <div class="mb-4"><label for="contact-name" class="block text-gray-700 font-semibold mb-2">Name</label><input type="text" id="contact-name" class="w-full p-3 bg-slate-100 text-gray-800 rounded-md border border-gray-300 focus:outline-none focus:ring-2 focus:ring-amber-500" required></div>
+                             <div class="mb-4"><label for="contact-email" class="block text-gray-700 font-semibold mb-2">Email</label><input type="email" id="contact-email" class="w-full p-3 bg-slate-100 text-gray-800 rounded-md border border-gray-300 focus:outline-none focus:ring-2 focus:ring-amber-500" required></div>
+                             <div class="mb-4"><label for="contact-message" class="block text-gray-700 font-semibold mb-2">Message</label><textarea id="contact-message" rows="4" class="w-full p-3 bg-slate-100 text-gray-800 rounded-md border border-gray-300 focus:outline-none focus:ring-2 focus:ring-amber-500" required></textarea></div>
+                             <button type="submit" class="w-full bg-amber-500 text-white font-bold py-3 px-6 rounded-lg hover:bg-amber-600 transition duration-300 glow-effect text-lg">Submit Message</button>
+                             <div id="contact-form-message" class="mt-4 text-center font-semibold"></div>
+                         </form>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Bottom Bar -->
+    <div class="bottom-bar text-gray-700 fixed bottom-0 left-0 right-0 z-40 shadow-lg">
+        <div class="container mx-auto px-6 py-4">
+            <div class="grid grid-cols-1 sm:grid-cols-3 gap-4 text-center">
+                <div class="flex items-center justify-center">
+                    <i class="fas fa-shopping-cart text-amber-500 mr-3 text-2xl"></i>
+                    <span class="font-semibold">Instant Purchase of Old Jewelry</span>
+                </div>
+                <div class="flex items-center justify-center">
+                    <i class="fas fa-handshake text-amber-500 mr-3 text-2xl"></i>
+                    <span class="font-semibold">Immediate Release of Pledged Gold</span>
+                </div>
+                <div class="flex items-center justify-center">
+                    <i class="fas fa-money-bill-wave text-amber-500 mr-3 text-2xl"></i>
+                    <span class="font-semibold">On-the-Spot Cash for Your Jewelry</span>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <!-- Floating Contact Button -->
+    <a href="#contact" class="fixed bottom-24 right-5 bg-amber-500 text-white px-4 py-3 rounded-full shadow-lg z-50 hover:bg-amber-600 transition-all font-bold flex items-center glow-effect">
+        <i class="fas fa-comment-dots mr-2"></i> Contact Us
+    </a>
+
+
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            // --- CACHED ELEMENTS ---
+            const mobileMenuButton = document.getElementById('mobile-menu-button');
+            const mobileMenu = document.getElementById('mobile-menu');
+            const heroForm = document.getElementById('hero-form');
+            const heroFormMessage = document.getElementById('hero-form-message');
+            const contactForm = document.getElementById('contact-form');
+            const contactFormMessage = document.getElementById('contact-form-message');
+            const faqItems = document.querySelectorAll('.faq-item');
+
+            // --- EVENT LISTENERS ---
+
+            // Mobile Menu Toggle
+            mobileMenuButton.addEventListener('click', () => mobileMenu.classList.toggle('hidden'));
+
+            // Smooth Scrolling for all anchor links
+            document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+                anchor.addEventListener('click', function (e) {
+                    e.preventDefault();
+                    if (mobileMenu && !mobileMenu.classList.contains('hidden')) {
+                        mobileMenu.classList.add('hidden');
+                    }
+                    const targetElement = document.querySelector(this.getAttribute('href'));
+                    if (targetElement) {
+                        targetElement.scrollIntoView({ behavior: 'smooth' });
+                    }
+                });
+            });
+
+            // Hero Form Submission
+            heroForm.addEventListener('submit', (e) => {
+                e.preventDefault();
+                const name = document.getElementById('hero-name').value;
+                heroFormMessage.textContent = `Thank you, ${name}! We will call you shortly.`;
+                heroFormMessage.classList.remove('text-red-500');
+                heroFormMessage.classList.add('text-green-600');
+                heroForm.reset();
+                setTimeout(() => heroFormMessage.textContent = '', 5000);
+            });
+
+            // Contact Form Submission
+            contactForm.addEventListener('submit', (e) => {
+                e.preventDefault();
+                contactFormMessage.textContent = 'Message sent successfully! We will get back to you soon.';
+                contactFormMessage.classList.remove('text-red-500');
+                contactFormMessage.classList.add('text-green-600');
+                contactForm.reset();
+                setTimeout(() => contactFormMessage.textContent = '', 5000);
+            });
+            
+            // FAQ Accordion
+            faqItems.forEach(item => {
+                const question = item.querySelector('.faq-question');
+                question.addEventListener('click', () => {
+                    faqItems.forEach(otherItem => {
+                        if (otherItem !== item) otherItem.classList.remove('active');
+                    });
+                    item.classList.toggle('active');
+                });
+            });
+        });
+    </script>
+</body>
+</html>
